@@ -7,35 +7,32 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="sidebar">
-      <h1> Plutonium <span>v1.1</span></h1>
-      <ul>
-        <li><a href="#">🏠 Home</a></li>
-        <li><a href="#">🎮 Games</a></li>
-        <li><a href="#">🖥️ Server</a></li>
-        <li><a href="#">💬 Forum</a></li>
-        <li><a href="#">🤖 AI</a></li>
-      </ul>
-    </div>
-    <div class="main-content">
-      <h1>Plutonium Proxy</h1>
-     
-      <div class="footer">
-        <div>
-          <h4></h4>
-          <ul>
-            <li><a href="#"></a></li>
-          </ul>
-        </div>
-        <div>
-          <h4></h4>
-          <ul>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-          </ul>
-        </div>
+    <div class="navbar">
+      <div class="logo"></div>
+      <div class="nav-links">
+        <a href="#">HOME</a>
+        <a href="#">GAMES</a>
+        <a href="#">APPS</a>
+        <a href="#">SETTINGS</a>
+      </div>
+      <div class="right-side">
+        <span id="time"></span>
+        <label class="switch">
+          <input type="checkbox" />
+          <span class="slider"></span>
+        </label>
       </div>
     </div>
+    <div class="main-content">
+      <h1>Plutonuim+</h1>
+      <form id="search-form">
+        <input type="text" id="search-bar" placeholder="URL Or Search" />
+      </form>
+    </div>
+    <footer>
+      <a href="#">Discord</a>
+      <a href="#">Github</a>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
