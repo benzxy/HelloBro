@@ -1,140 +1,45 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Updated background to mimic the new design */
 body {
-  background-color: #000;
-  color: #fff;
+  margin: 0;
   font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #f7971e, #a41cff);
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
   overflow: hidden;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #000;
-  border-bottom: 1px solid #333;
-}
-
-.navbar .logo {
-  font-size: 20px;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  margin: 0 10px;
-  font-size: 14px;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-.right-side {
-  display: flex;
-  align-items: center;
-}
-
-#time {
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 34px;
-  height: 20px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.slider {
+/* Particle effect for the stars */
+body::before {
+  content: "";
   position: absolute;
-  cursor: pointer;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  transition: 0.4s;
-  border-radius: 34px;
+  width: 100%;
+  height: 100%;
+  background: url("https://www.transparenttextures.com/patterns/tiny-grid.png"); /* Subtle stars effect */
+  opacity: 0.1; /* Adjust the opacity for a subtle effect */
 }
 
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 14px;
-  width: 14px;
-  left: 3px;
-  bottom: 3px;
-  background-color: #000;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:checked + .slider:before {
-  transform: translateX(14px);
-}
-
+/* General styles for the rest of the page */
 .main-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  flex-grow: 1;
-}
-
-.main-content h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.main-content input {
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background: #111;
-  color: #fff;
   text-align: center;
+  z-index: 1; /* Make sure it appears above the background */
 }
 
 footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 20px;
-  background-color: #000;
-  border-top: 1px solid #333;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  z-index: 1;
 }
-
-footer a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
+/* Style for the search bar and input field */
 .main-content form {
   display: flex;
   flex-direction: column;
@@ -147,31 +52,91 @@ footer a:hover {
 .main-content button {
   width: 300px;
   padding: 10px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  background: #111;
-  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle border */
+  border-radius: 20px; /* Rounded corners */
+  background: linear-gradient(
+    180deg,
+    #f7971e,
+    #a41cff
+  ); /* Same gradient as the background */
+  color: white; /* Text color */
+  font-size: 16px;
   text-align: center;
   transition: all 0.3s ease;
   outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.main-content input:focus,
+/* Hover and focus effect for input and button */
 .main-content input:hover,
-.main-content select:focus,
-.main-content select:hover,
+.main-content input:focus,
 .main-content button:hover {
-  border-color: #2196f3;
-  box-shadow: 0 0 8px #2196f3;
+  border-color: white; /* Highlight border on hover */
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Glow effect */
 }
 
 .main-content button {
   cursor: pointer;
-  background-color: #2196f3;
+  background: linear-gradient(
+    180deg,
+    #a41cff,
+    #f7971e
+  ); /* Inverse gradient for button */
   border: none;
-  color: #fff;
+  color: white;
+  font-weight: bold;
 }
 
+/* Button hover effect */
 .main-content button:hover {
-  background-color: #1768ac;
+  background: linear-gradient(
+    180deg,
+    #f7971e,
+    #a41cff
+  ); /* Restore original gradient */
+  transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+/* Adjust select dropdown to match theme */
+.main-content select {
+  background: linear-gradient(180deg, #f7971e, #a41cff);
+  color: white;
+}
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  width: 90%;
+  margin: 20px auto;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+}
+
+/* Logo Style */
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.navbar .nav-links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+/* Hover Effect for Links */
+.navbar .nav-links a:hover {
+  color: #f7971e; /* Highlight color */
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Glow effect */
 }
