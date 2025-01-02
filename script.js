@@ -20,7 +20,7 @@ document
       const url =
         query.startsWith("http://") || query.startsWith("https://")
           ? query
-          : `https://v4-hawktuah23.vercel.app/mastery?auth=a3utb1o`;
+          : `https://v4-o1vp.vercel.app/mastery?auth=71js3j2`;
       window.open(url, "_blank"); // Open the URL or search in a new tab
     }
   });
