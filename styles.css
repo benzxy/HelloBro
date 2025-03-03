@@ -7,7 +7,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f1f1f1;
+  background-color: #000000; /* Set background to black */
+  color: #ffffff; /* Set text color to white for contrast */
 }
 
 /* Main content area */
@@ -33,5 +34,11 @@ body {
   max-width: 300px; /* Limit the max size of each video */
   height: auto;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Slight shadow for better contrast */
+}
+
+/* Heading styles */
+h2 {
+  color: #ffffff; /* Ensure heading text is white */
+  margin-bottom: 20px;
 }
