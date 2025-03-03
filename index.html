@@ -3,38 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Plutonium Proxy</title>
+    <title>Video Gallery</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="navbar">
-      <div class="logo">🚀</div>
-      <div class="nav-links">
-        <a href="https://benzxy.github.io/lowtaperfadeisstillmassive.github.io/"
-          >HOME</a
-        >
-        <a href="#">GAMES</a>
-        <a href="https://benzxy.github.io/gyhyu/">APPS</a>
-        <a href="https://thepizzaedition.github.io/apps/ai/indexone.html">AI</a>
-      </div>
-      <div class="right-side">
-        <span id="time"></span>
-        <label class="switch">
-          <input type="checkbox" />
-          <span class="slider"></span>
-        </label>
+    <!-- Main page content -->
+    <div id="main-content">
+      <h2>Video Gallery</h2>
+      <div class="video-gallery">
+        <!-- 50 videos in the gallery -->
+        <div class="video-container">
+          <video controls>
+            <source src="video1.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-container">
+          <video controls>
+            <source src="video2.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div class="video-container">
+          <video controls>
+            <source src="video3.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <!-- Add more videos here up to video50.mp4 -->
+        <div class="video-container">
+          <video controls>
+            <source src="video50.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
-    <div class="main-content">
-      <h1>Plutonium V1</h1>
-      <form id="search-form">
-        <input type="text" id="search-bar" placeholder="URL Or Search" />
-      </form>
-    </div>
-    <footer>
-      <a href="#">Discord</a>
-      <a href="#">Github</a>
-    </footer>
-    <script src="script.js"></script>
   </body>
 </html>
