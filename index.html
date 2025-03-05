@@ -185,17 +185,17 @@
 
     <!-- Navigation Bar -->
     <div class="navbar">
-        <button onclick="navigate(1)">1</button>
-        <button onclick="navigate(2)">2</button>
-        <button onclick="navigate(3)">3</button>
-        <button onclick="navigate(4)">4</button>
-        <button onclick="navigate(5)">5</button>
+        <button onclick="navigate('page1.html')">1</button>
+        <button onclick="navigate('https://benzxy.github.io/HawkTuah/')">2</button>
+        <button onclick="navigate('page3.html')">3</button>
+        <button onclick="navigate('page4.html')">4</button>
+        <button onclick="navigate('page5.html')">5</button>
     </div>
 
     <script>
-        function navigate(pageNumber) {
-            // Logic to navigate to the corresponding page or section
-            alert("Navigating to page " + pageNumber);
+        function navigate(page) {
+            // Navigate to the corresponding page
+            window.location.href = page;
         }
     </script>
 </body>
